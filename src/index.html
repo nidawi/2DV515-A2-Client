@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Assignment 2 - Clustering</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+</head>
+<body>
+  <div class="input-group mb-1">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="cluster-type-select">Method</label>
+    </div>
+    <select class="custom-select" id="cluster-type-select">
+      <option value="1" selected>Hierarchical</option>
+      <option value="2">K-Means</option>
+    </select>
+
+    <div class="input-group-prepend">
+      <span class="input-group-text">Clusters</span>
+    </div>
+    <input disabled type="text" class="form-control" id="cluster-count-input" placeholder="5" aria-label="Clusters" aria-describedby="cluster-count-input">
+
+    <div class="input-group-prepend">
+      <span class="input-group-text">Iterations</span>
+    </div>
+    <input disabled type="text" class="form-control" id="iteration-count-input" placeholder="20" aria-label="Iterations" aria-describedby="iteration-count-input">
+
+    <div class="input-group-append">
+        <button class="btn btn-primary" id="go-button" type="button">Cluster me this, batman!</button>
+    </div>
+  </div>
+
+  <div class="progress" id="progress-bar">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100"></div>
+  </div>
+
+  <div id="jstree" class="mt-3">
+  </div>
+  <script src="build.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
